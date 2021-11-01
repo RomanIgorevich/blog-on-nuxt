@@ -3,6 +3,7 @@
     <Promo />
     <intro title="опять я вызвал интро" />
     <post-list :posts="posts" />
+    <contacts />
   </div>
 </template>
 
@@ -10,11 +11,13 @@
 import Promo from "../components/Promo.vue";
 import Intro from "../components/UI/Intro.vue";
 import PostList from "../components/Blog/PostList.vue";
+import Contacts from '../components/Contacts.vue'
 export default {
   components: {
     Promo,
     Intro,
     PostList,
+    Contacts
   },
   data() {
     return {
