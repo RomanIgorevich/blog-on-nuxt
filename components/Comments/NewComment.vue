@@ -1,16 +1,14 @@
 <template>
-  <section class="contact">
+  <section class="new-comment">
     <div class="container">
-      <h2 class="title">Отправить сообщение</h2>
+      <h2 class="title">Новыи коментарии</h2>
       <form @submit.prevent="onSubmit" class="contact-form">
         <label>Имя:</label>
-        <input v-model="user.name" type="text" />
-        <label>Email:</label>
-        <input v-model="user.text" type="text" />
+        <input v-model="comment.name" type="text" />
         <label>Text:</label>
-        <textarea v-model="user.text"></textarea>
+        <textarea v-model="comment.text"></textarea>
         <div class="controls">
-          <button class="btnWhite">Отправить</button>
+          <button class="btn btnPrimary">Отправить</button>
         </div>
       </form>
     </div>
@@ -21,31 +19,23 @@
 export default {
   data() {
     return {
-      user: {
+      comment: {
         name: "",
-        email: "",
         text: "",
       },
     };
   },
   methods: {
     onSubmit() {
-      this.user.name = "";
-      this.user.email = "";
-      this.user.text = "";
+      console.log(this.comment);
     },
   },
 };
 </script>
 
 <style lang="scss">
-.contact {
+.new-comment {
   text-align: center;
-  background: #4f68f4;
-  color: #fff;
-  .title {
-    color: #fff;
-  }
   .contact-form {
     max-width: 600px;
     margin: 30px auto;
