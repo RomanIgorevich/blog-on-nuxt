@@ -15,11 +15,6 @@
 </template>
 
 <script>
-import AppButton from "@/components/UI/Controls/Button.vue";
-import AppInput from "@/components/UI/Controls/Input.vue";
-import AppTextAria from "@/components/UI/Controls/TextAria.vue";
-import Message from "@/components/UI/Message.vue";
-
 export default {
   data() {
     return {
@@ -29,12 +24,6 @@ export default {
         text: "",
       },
     };
-  },
-  components: {
-    AppButton,
-    AppInput,
-    AppTextAria,
-    Message,
   },
   methods: {
     onSubmit() {
