@@ -8,7 +8,7 @@
         <label>Text:</label>
         <textarea v-model="comment.text"></textarea>
         <div class="controls">
-          <button class="btn btnPrimary">Отправить</button>
+          <AppButton>Отправить</AppButton>
         </div>
       </form>
     </div>
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import AppButton from "@/components/UI/Controls/Button.vue";
 export default {
   data() {
     return {
@@ -24,6 +25,9 @@ export default {
         text: "",
       },
     };
+  },
+  components: {
+    AppButton,
   },
   methods: {
     onSubmit() {

@@ -10,7 +10,7 @@
         <label>Text:</label>
         <textarea v-model="user.text"></textarea>
         <div class="controls">
-          <button class="btnWhite">Отправить</button>
+          <AppButton class="btnWhite"> Submit </AppButton>
         </div>
       </form>
     </div>
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import AppButton from "@/components/UI/Controls/Button.vue";
 export default {
   data() {
     return {
@@ -27,6 +28,9 @@ export default {
         text: "",
       },
     };
+  },
+  components: {
+    AppButton,
   },
   methods: {
     onSubmit() {
