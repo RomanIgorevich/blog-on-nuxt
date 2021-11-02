@@ -3,12 +3,9 @@
     <div class="container">
       <h2 class="title">Отправить сообщение</h2>
       <form @submit.prevent="onSubmit" class="contact-form">
-        <label>Имя:</label>
-        <input v-model="user.name" type="text" />
-        <label>Email:</label>
-        <input v-model="user.text" type="text" />
-        <label>Text:</label>
-        <textarea v-model="user.text"></textarea>
+        <AppInput v-model="user.name">Имя:</AppInput>
+        <AppInput v-model="user.email" type="email">Email:</AppInput>
+        <AppTextAria v-model="user.text">Text:</AppTextAria>
         <div class="controls">
           <AppButton class="btnWhite"> Submit </AppButton>
         </div>
@@ -19,6 +16,9 @@
 
 <script>
 import AppButton from "@/components/UI/Controls/Button.vue";
+import AppInput from "@/components/UI/Controls/Input.vue";
+import AppTextAria from "@/components/UI/Controls/TextAria.vue";
+
 export default {
   data() {
     return {
@@ -31,6 +31,8 @@ export default {
   },
   components: {
     AppButton,
+    AppInput,
+    AppTextAria,
   },
   methods: {
     onSubmit() {

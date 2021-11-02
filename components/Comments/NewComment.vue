@@ -3,10 +3,8 @@
     <div class="container">
       <h2 class="title">Новыи коментарии</h2>
       <form @submit.prevent="onSubmit" class="contact-form">
-        <label>Имя:</label>
-        <input v-model="comment.name" type="text" />
-        <label>Text:</label>
-        <textarea v-model="comment.text"></textarea>
+        <AppInput v-model="comment.name">Имя:</AppInput>
+        <AppTextAria v-model="comment.text">Text:</AppTextAria>
         <div class="controls">
           <AppButton>Отправить</AppButton>
         </div>
@@ -17,6 +15,8 @@
 
 <script>
 import AppButton from "@/components/UI/Controls/Button.vue";
+import AppInput from "@/components/UI/Controls/Input.vue";
+import AppTextAria from "@/components/UI/Controls/TextAria.vue";
 export default {
   data() {
     return {
@@ -28,6 +28,8 @@ export default {
   },
   components: {
     AppButton,
+    AppInput,
+    AppTextAria,
   },
   methods: {
     onSubmit() {
