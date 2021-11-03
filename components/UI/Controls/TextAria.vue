@@ -1,10 +1,7 @@
 <template>
   <div class="control">
     <label><slot /></label>
-    <textarea
-      :value="value"
-      @input="$emit('input', $event.target.value)"
-    ></textarea>
+    <textarea :value="value" @input="$emit('input', $event.target.value)" />
   </div>
 </template>
 
