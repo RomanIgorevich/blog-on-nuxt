@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper-content wrapper-content--fixed">
-    <PostsList :posts="posts" />
+    <Post-list :posts="posts" />
   </div>
 </template>
 
