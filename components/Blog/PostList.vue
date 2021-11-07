@@ -2,7 +2,12 @@
   <section class="post-list">
     <div class="container">
       <div class="posts__wrapper">
-        <post-preview v-for="post in posts" :key="post.id" :post="post">
+        <post-preview
+          v-for="post in posts"
+          :key="post.id"
+          :post="post"
+          :admin="admin"
+        >
         </post-preview>
       </div>
     </div>
@@ -19,6 +24,10 @@ export default {
     posts: {
       type: Array,
       requried: true,
+    },
+    admin: {
+      type: Boolean,
+      default: false,
     },
   },
 };

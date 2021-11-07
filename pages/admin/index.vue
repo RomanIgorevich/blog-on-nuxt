@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper-content wrapper-content--fixed">
-    <Post-list :posts="posts" />
+    <Post-list :admin=true :posts="posts" />
   </div>
 </template>
 
